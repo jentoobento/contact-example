@@ -97,10 +97,14 @@
     background-color: #ff6200; 
     height: 6px; 
     margin-top: 5px; 
-    opacity: 0;
 }
-.nav-underline-selected {
-    opacity: 1;
+
+.submenu-container {
+    border-color: grey; 
+    border: solid; 
+    position: absolute; 
+    padding: 15px; 
+    background-color: #fff;
 }
 
 .container {

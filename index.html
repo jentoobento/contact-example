@@ -32,27 +32,37 @@
             <div class="nav-container">
                 <div class="nav">
                     <text class="nav-button nav-button-selected" onclick="navClick(1)" id="title1">TITLE 1</text>
-                    <div class="nav-underline nav-underline-selected" id="underline1">&nbsp;</div>
+                    <div class="nav-underline" id="underline1">&nbsp;</div>
                 </div>
                 <div class="nav">
                     <text class="nav-button" onclick="navClick(2)" id="title2">TITLE 2</text>
-                    <div class="nav-underline" id="underline2">&nbsp;</div>
+                    <div class="nav-underline" style="display: none;" id="underline2">&nbsp;</div>
+                    <div class="submenu-container" style="display: none;" id="submenu1">
+                        <div onclick="submenuClick(1)">SUBMENU 1</div>
+                        <div onclick="submenuClick(2)" style="margin-top: 5px;">SUBMENU 2</div>
+                        <div onclick="submenuClick(3)" style="margin-top: 5px;">SUBMENU 3</div>
+                    </div>
+                    <div class="submenu-container" style="display: none; margin-left: 104px; margin-top: 35px;" id="submenu2">
+                        <div>SUBMENU 1</div>
+                        <div style="margin-top: 5px;">SUBMENU 2</div>
+                        <div style="margin-top: 5px;">SUBMENU 3</div>
+                    </div>
                 </div>
                 <div class="nav">
                     <text class="nav-button" onclick="navClick(3)" id="title3">TITLE 3</text>
-                    <div class="nav-underline" id="underline3">&nbsp;</div>
+                    <div class="nav-underline" style="display: none;" id="underline3">&nbsp;</div>
                 </div>
                 <div class="nav">
                     <text class="nav-button" onclick="navClick(4)" id="title4">TITLE 4</text>
-                    <div class="nav-underline" id="underline4">&nbsp;</div>
+                    <div class="nav-underline" style="display: none;" id="underline4">&nbsp;</div>
                 </div>
                 <div class="nav">
                     <text class="nav-button" onclick="navClick(5)" id="title5">TITLE 5</text>
-                    <div class="nav-underline" id="underline5">&nbsp;</div>
+                    <div class="nav-underline" style="display: none;" id="underline5">&nbsp;</div>
                 </div>
                 <div class="nav">
                     <text class="nav-button" onclick="navClick(6)" id="title6">TITLE 6</text>
-                    <div class="nav-underline" id="underline6">&nbsp;</div>
+                    <div class="nav-underline" style="display: none;" id="underline6">&nbsp;</div>
                 </div>
             </div>
         </div>
@@ -112,13 +122,33 @@
         function navClick(num) {
             let navBtn = document.getElementById("title" + num);
             let navUnderline = document.getElementById("underline" + num);
-            // remove class
+
+            navUnderline.style.display = navBtn.classList.contains("nav-button-selected") ? "none" : "block";
+            
             if(navBtn.classList.contains("nav-button-selected")){
                 navBtn.classList.remove("nav-button-selected");
                 navUnderline.classList.remove("nav-underline-selected");
             }else{
                 navBtn.classList.add("nav-button-selected");
                 navUnderline.classList.add("nav-underline-selected");
+            }
+
+            let submenu = document.getElementById("submenu1")
+            submenu.style.display = num === 2 && navBtn.classList.contains("nav-button-selected")
+                ? "block"
+                : "none";
+            
+            let submenu2 = document.getElementById("submenu2");
+            if(num !== 2){
+                submenu2.style.display = "none";
+            }
+        }
+
+        function submenuClick(num){
+            let submenu1 = document.getElementById("submenu1");
+            let submenu2 = document.getElementById("submenu2");
+            if(num === 2 && submenu1.style.display === "block"){
+                submenu2.style.display = "block";
             }
         }
 
