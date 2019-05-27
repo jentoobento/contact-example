@@ -1,3 +1,32 @@
+.modal-container {
+    position: absolute; 
+    margin-left: 30%; 
+    margin-top: 20%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border: solid; 
+    border-width: 20px; 
+    border-color: #ff6200; 
+    height: 200px; 
+    width: 500px; 
+    background-color: #fff;
+}
+.modal-text {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 25px;
+}
+.modal-close-button {
+    margin-top: 20px; 
+    font-family: sans-serif; 
+    background-color: #ff6200; 
+    color: #fff; 
+    font-size: 15px; 
+    border: transparent; 
+    height: 30px;
+}
+
 .topbar-container {
     display: flex;
     background-color: #ff6200; 
