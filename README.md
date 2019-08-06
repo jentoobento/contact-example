@@ -6,6 +6,7 @@ Deployed at: <https://jentoobento.github.io/contact-example/>
 
 Notes:
 
+- Given a PSD file, this is a pixel perfect copy that is also functional
 - Writing in vanilla Javascript is very painful
 - Would rather have the option to use a framework (such as React) for easier functionality
 
