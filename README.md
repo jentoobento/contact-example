@@ -1,10 +1,13 @@
-Published at: <https://jentoobento.github.io/contact-example/>
+# [Contact Us](https://jentoobento.github.io/contact-example/ "Click here to go to the deployed page")
 
 <img src="https://github.com/jentoobento/contact-example/blob/master/homePage.png" width=650 height=400 />
 
+Deployed at: <https://jentoobento.github.io/contact-example/>
+
 Notes:
-- Fonts are not exact (didn't have access to fonts)
-- Measurements not strictly exact (Photoshop not available)
+
+- Writing in vanilla Javascript is very painful
+- Would rather have the option to use a framework (such as React) for easier functionality
 
 Known Bugs:
 
@@ -13,7 +16,3 @@ Known Bugs:
 - Message box for submission confirmation
 - More than 1 Title can be clicked at a time
 - Functionality for other clickable items?
-
-Future Reference:
-
-- Redo in React... vanilla Javascript is painful
